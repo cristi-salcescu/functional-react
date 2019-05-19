@@ -1,0 +1,9 @@
+.content {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content > div{
+    flex : 1;
+}

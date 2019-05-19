@@ -1,0 +1,12 @@
+.shopping-cart-item {
+    padding: 10px;
+    margin: 10px;
+    color: #FFF;  
+    background-color: #FF9C00;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-cart-item div {
+    margin: 5px;
+}

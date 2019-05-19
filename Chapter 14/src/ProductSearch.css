@@ -1,0 +1,12 @@
+.search-button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #FF9C00;
+    color: #FFF;
+    border: 1px solid #FF9C00;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+ }

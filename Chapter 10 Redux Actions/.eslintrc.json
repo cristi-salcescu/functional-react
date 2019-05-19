@@ -1,0 +1,12 @@
+{
+    "extends": [
+		"react-app",
+        "eslint:recommended"
+    ],
+    "rules": {
+	  "semi": "error",
+      "max-params": ["error", 4],
+      "eqeqeq" : "error",
+	  "no-var": "error"
+    }
+}

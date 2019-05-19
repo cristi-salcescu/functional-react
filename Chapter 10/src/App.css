@@ -1,0 +1,21 @@
+button {
+    background: #FAF1DD;
+    border: 1px solid #FAF1DD;
+    color: #654321;
+    padding: 5px;
+    cursor: pointer;
+}
+
+header {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content > div{
+    flex : 1;
+}

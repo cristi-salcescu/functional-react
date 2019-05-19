@@ -1,0 +1,129 @@
+//JSX
+ReactDOM.render(
+  <header>
+      <h1>A Shopping Cart</h1>
+  </header>,
+  document.getElementById("root")
+)
+
+//Transpiled to JavaScript
+ReactDOM.render(
+  React.createElement("header", null, 
+    React.createElement("h1", null, "A Shopping Cart")
+  ),    
+  document.getElementById("root")
+);
+
+//-----------------------------
+
+function Message(){
+  const message = "1+1=2";
+  return <div>{message}</div>
+}
+
+function Message(){
+  return <div>1+1={1+1}</div>
+}
+
+function Message(){
+  const sum = (a, b) => a + b;
+  return <div>1+1={sum(1, 1)}</div>
+}
+
+ReactDOM.render(<Message/>, document.querySelector("#root"));
+
+//-----------------------------
+
+function Valid({valid}){
+  return <span>{ valid ? "Valid" : "Invalid"}</span>
+}
+
+ReactDOM.render(<Valid valid={false} />,    
+ document.getElementById("root"));
+
+//----------------------------- 
+ 
+ function Valid({valid}){
+   if(valid){
+     return <span>Valid</span>
+   } else {
+     return <span>Invalid</span>
+   }
+ }
+ 
+ ReactDOM.render(<Valid valid={false}/>, 
+ document.querySelector("#root"));
+ 
+//----------------------------- 
+ 
+ function Valid({valid}){
+   let resultJSX;
+   if(valid){
+     resultJSX = <span>Valid</span>;
+   } else {
+     resultJSX = <span>Invalid</span>;
+   }
+   
+   return resultJSX;
+ }
+ 
+ ReactDOM.render(<Valid valid={false}/>, 
+ document.querySelector("#root"));
+ 
+//----------------------------- 
+ 
+ function Message(){
+   const messageText = "<b>learn</b>";  
+   return <span>{messageText}</span>;
+ }
+ 
+ ReactDOM.render(<Message />, 
+  document.querySelector("#root"));
+  
+//----------------------------- 
+
+function Message(){
+  const messageJSX = <b>learn</b>;
+  return <span>{messageJSX}</span>;
+}
+
+ReactDOM.render(<Message />, 
+  document.querySelector("#root"));
+  
+//-----------------------------
+
+function product(){
+  return <div>A product</div>
+}
+
+ReactDOM.render(<product />, document.querySelector("#root"));
+
+//-----------------------------
+
+function Product(){
+  return
+    <div>
+      A product
+    </div>
+}
+
+function Product(){
+  return (
+    <div>
+      A product
+    </div>
+  );
+}
+
+//-----------------------------
+
+function Valid({valid}){
+  return <span>{ valid ? "Valid" : "Invalid"}</span>
+}
+
+<Valid valid={false}/>
+
+<Valid valid="false" />
+
+
+<Valid valid="{false}" />
