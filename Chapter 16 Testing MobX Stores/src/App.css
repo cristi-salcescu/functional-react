@@ -1,0 +1,28 @@
+button {
+    background: #FAF1DD;
+    border: 1px solid #FAF1DD;
+    color: #654321;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    color: #654321;
+    border: 1px solid #FF9C00;
+}
+
+header {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.content > div{
+    flex : 1;
+}

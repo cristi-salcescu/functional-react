@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import { partial } from "lodash";
 import { addToCart } from "../actions/shoppingCartActions";
 import ProductList from "../ProductList";
 
@@ -18,12 +17,13 @@ function mapDispatchToProps(dispatch) {
 }
 
 function filterProducts(products, query){
-  const isInQuery = partial(isProductInQuery, query);
-  return products.filter(isInQuery);
+  return products.filter(isInQuery(query));
 }
 
-function isProductInQuery(query, product){
-  return product.name.includes(query.text); 
+function isInQuery(query){
+  return function(product){
+    return product.name.includes(query.text); 
+  };
 }
 
 export default connect(

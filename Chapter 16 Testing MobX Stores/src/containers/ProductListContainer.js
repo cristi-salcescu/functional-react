@@ -1,4 +1,5 @@
 import { inject, observer } from "mobx-react";
+import partial from "lodash/partial";
 
 import ProductList from '../ProductList';
 
@@ -15,7 +16,7 @@ function filterProducts(products, query){
 
 function isInQuery(query){
   return function(product){
-    return product.name.includes(query.text); 
+    return product.name.includes(query.text);
   };
 }
 

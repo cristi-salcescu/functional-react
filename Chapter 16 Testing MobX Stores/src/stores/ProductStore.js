@@ -5,7 +5,7 @@ export default function ProductStore(api){
 
     const fetchProducts = action(function(){
         return api.fetchProducts()
-            .then(resetProducts);
+                .then(resetProducts);
     });
     
     function resetProducts(newProducts){
