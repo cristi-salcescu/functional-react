@@ -1,8 +1,8 @@
 import { observable, action } from "mobx";
 
 export default function UIStore(){
-    const state = observable.object({
-        query : { 
+    const state = observable({
+        query : {
             text : ""
         }
     });
@@ -10,7 +10,7 @@ export default function UIStore(){
     function getQuery(){
         return state.query;
     }
-    
+
     const setQuery = action(function(query){
         state.query = query;
     });
